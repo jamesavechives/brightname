@@ -1,4 +1,4 @@
-@extends('layouts.ve')
+@extends('v1.layouts.ve')
 
 @section('content')
 <div class="container" align="middle">

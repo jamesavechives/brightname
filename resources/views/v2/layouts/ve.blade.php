@@ -13,8 +13,8 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-iso.css">
-     <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap-iso.css')}}">
+     <script src="{{url('/bootstrap/js/bootstrap.js')}}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>-->
     <!-- Scripts -->
@@ -26,10 +26,9 @@
 </head>
 <body class="chrome">
 <div class="body_wrap">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav id="topmenu" class="clearfix">
         <div class="container">
             
-            <div class="collapse navbar-collapse " id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     &nbsp;
@@ -38,12 +37,13 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a  href="{{ url('/importExport') }}">导入订单(Import Order)</a></li>
-                        <li><a href="{{ url('/createorder') }}">创建订单(Create Order)</a></li>
-                        <li><a href="{{ url('/updateorder') }}">更新订单(Update Order)</a></li>
-                        <li><a href="{{ url('/updatehawb') }}">更新HAWB(Update HAWB)</a></li>
+                        <li><a  href="{{ url('/v2/importExport') }}">导入订单(Import Order)</a></li>
+                        <li><a href="{{ url('/v2/createorder') }}">创建订单(Create Order)</a></li>
+                        <li><a href="{{ url('/v2/updateorder') }}">更新订单(Update Order)</a></li>
+                        <li><a href="{{ url('/v2/cancelorder') }}">取消订单(Cancel Order)</a></li>
+                        <li><a href="{{ url('/v2/getlabels') }}">获取运单(Get Labels)</a></li>
+                        <li><a href="{{ url('/v2/wrapshipment') }}">包装发货(Wrap Shipment)</a></li>
                 </ul>
-                </div>
             </div>
     </nav>
                  @yield('content')

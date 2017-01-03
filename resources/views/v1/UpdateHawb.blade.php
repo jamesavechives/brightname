@@ -1,4 +1,4 @@
-@extends('layouts.ve')
+@extends('v1.layouts.ve')
 
 @section('content')
 <div class="container" align="middle">
@@ -6,7 +6,7 @@
         <div class="" >
             <div class="panel panel-default">
                 <div class="panel-heading"><strong>更新HAWB(Update HAWB)</strong></div>
-                    <form class="form-inline" role="form" method="POST" action="{{ url('/updatehawb') }}">
+                    <form class="form-inline" role="form" method="POST" action="{{ url('/v1/updatehawb') }}">
                         {{ csrf_field() }}
                         <div class="bootstrap-iso">
                             <div class="row" style="width:500px;">

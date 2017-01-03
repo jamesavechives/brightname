@@ -1,4 +1,4 @@
-@extends('layouts.ve')
+@extends('v2.layouts.ve')
 
 @section('content')
 <div class="container">		
@@ -24,17 +24,17 @@
 						{{ Session::get('error') }}
 					</div>
 				@endif
-				<form style="border: 4px solid #a1a1a1;margin-top: 15px;padding: 20px;" action="{{ URL::to('importExcel') }}" class="form-horizontal" method="post" enctype="multipart/form-data">
+				<form style="border: 4px solid #a1a1a1;margin-top: 15px;padding: 20px;" action="{{ URL::to('v2/importExcel') }}" class="form-horizontal" method="post" enctype="multipart/form-data">
 
 					<input type="file" name="import_file" />
 					{{ csrf_field() }}
 					<br/>
 
-					<button class="btn btn-primary">导入CSV或者EXCEL文件(Import CSV or Excel File)</button>
+					<button class="btn btn-primary">导入EXCEL(Import Excel)</button>
 				</form>
 				<br/>
 		  </div>
-                     <div align="right"><a href="{{url('upload/Template.xlsx')}}" >下载模板(Download Template)</a></div>
+                     <div align="right"><a href="{{url('upload/Templatev2.xlsx')}}" >下载模板(Download Template)</a></div>
 		</div>
 	</div>
 @endsection

@@ -1,4 +1,4 @@
-@extends('layouts.ve')
+@extends('v1.layouts.ve')
 
 @section('content')
 <div class="container" align="middle">
@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><strong>创建订单(Create Order)</strong></div>
                 
-                    <form class="form-inline" target="_blank" role="form" method="POST" action="{{ url('/createorder') }}">
+                    <form class="form-inline" target="_blank" role="form" method="POST" action="{{ url('/v1/createorder') }}">
                         {{ csrf_field() }}
                         <div class="bootstrap-iso">
                             <div class="row" style="width:500px;">

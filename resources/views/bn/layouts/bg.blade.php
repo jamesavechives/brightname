@@ -92,7 +92,7 @@ tf_script={"TF_THEME_PREFIX":"kiddoturf","TFUSE_THEME_URL":"http:\/\/171.88c.myf
                 <div class="rocket"></div>
 				               <a href="{{ url('/') }}"><div class="logo"><img src="{{ url('/photos/BrightNameLogo_Finalrev3.png') }}"   border="0" /></div></a>
                       <nav id="topmenu" class="clearfix">   
-                    <div class="topmenu_inner">  
+<div class="topmenu_inner">  
                         <div class="menu-menu-container"><ul id="menu-menu" class="dropdown"><li id="menu-item-474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"><a href="{{ url('/aboutus') }}"><span>About Us</span></a></li>
 <li id="menu-item-522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-522"><a href="{{ url('/adultnames') }}"><span>Adult Names</span></a>
 <ul class="submenu-1" />
@@ -100,12 +100,13 @@ tf_script={"TF_THEME_PREFIX":"kiddoturf","TFUSE_THEME_URL":"http:\/\/171.88c.myf
 </ul>
 </li>
 <li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-504"><a href="{{ url('/babynames') }}"><span>Baby Names</span></a>
-<ul/ class="submenu-1" />
+<ul class="submenu-1" />
 	<li id="menu-item-470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-470"><a href="{{ url('/babygallery/all') }}"><span>Baby Gallery</span></a></li>
 </ul>
 </li>
 <li id="menu-item-472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-472"><a href="{{ url('/contactus') }}"><span>Contact</span></a></li>
-</ul></div>                    </div>
+</ul></div>                    
+</div>
                  </nav>
                 
                 <div id="top_kite"></div>

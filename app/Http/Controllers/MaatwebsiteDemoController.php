@@ -11,10 +11,7 @@ use Excel;
 class MaatwebsiteDemoController extends Controller
 {
     //
-    public function importExport()
-	{
-		return view('importExport');
-	}
+   
     function arrayToObject($e){
     if( gettype($e)!='array' ) return;
     foreach($e as $k=>$v){
@@ -23,7 +20,7 @@ class MaatwebsiteDemoController extends Controller
     }
     return (object)$e;
 }    
-    public function importExcel(Request $request)
+    public function importExcelv1(Request $request)
 	{
 
 		if($request->hasFile('import_file')){
@@ -37,7 +34,27 @@ class MaatwebsiteDemoController extends Controller
                             $data[$key]['weight']=intval($value['weight']/$value['qty']*1000);
                         }
                         $data=$this->arrayToObject($data);
-                        return view('multiorder', ['data' => $data]);
+                        return view('v1/multiorder', ['data' => $data]);
+		}
+
+		return back()->with('error','Please Check your file, Something is wrong there.');
+	}
+        
+        public function importExcelv2(Request $request)
+	{
+
+		if($request->hasFile('import_file')){
+			$path = $request->file('import_file')->getRealPath();
+
+			$data = Excel::load($path, function($reader) {})->get();
+                        $data=$data->toArray()[0];
+                       
+                        foreach($data as $key=>$value){ 
+                            $data[$key]['price']=intval($value['price']*100);
+                            $data[$key]['weight']=intval($value['weight']/$value['qty']);
+                        }
+                        $data=$this->arrayToObject($data);
+                        return view('v2/multiorder', ['data' => $data]);
 		}
 
 		return back()->with('error','Please Check your file, Something is wrong there.');

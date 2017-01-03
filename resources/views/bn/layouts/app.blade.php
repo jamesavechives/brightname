@@ -13,8 +13,8 @@
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-iso.css">
-     <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap-iso.css')}}">
+     <script src="{{url('/bootstrap/js/bootstrap.js')}}"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>-->
     <!-- Scripts -->

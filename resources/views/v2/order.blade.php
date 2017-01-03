@@ -1,4 +1,4 @@
-@extends('layouts.ve')
+@extends('v1.layouts.ve')
 
 @section('content')
 <div class="container" align="middle">
@@ -8,7 +8,7 @@
                 <div class="panel-heading"><strong>订单生成结果(Order Result)</strong></div>
                 <div class="clearfix"></div>
                 <div>参考号(Reference):<span>{{ $order->reference }}</span></div>
-                <form class="form-inline" role="form" method="POST" action="{{ url('/updateorder') }}">
+                <form class="form-inline" role="form" method="POST" action="{{ url('/v1/updateorder') }}">
                         {{ csrf_field() }}
                 <input type="hidden" name="key" value='{{$key}}' />
                 <input type="hidden" name="client_reference" value='{{ $order->client_reference }}' />
